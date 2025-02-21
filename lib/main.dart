@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ukk_kantin_yanto/pages/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/splash',
+      initialRoute: '/welcome',
       debugShowCheckedModeBanner: false,
-      // routes: {'/splash': (context) => SplashScreen()},
+      routes: {'/welcome': (context) => WelcomePage()},
     );
   }
 }
