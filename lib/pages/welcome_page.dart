@@ -22,7 +22,7 @@ class _WelcomePageState extends State<WelcomePage> {
             child: Center(
               child: Text(
                 "Welcome\nTo\nPesenin",
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.nunitoSans(
                   fontSize: MediaQuery.of(context).size.width * 0.095,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -63,7 +63,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: Color(0xff374F6B),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -72,16 +72,20 @@ class _WelcomePageState extends State<WelcomePage> {
                         horizontal: 100,
                       ),
                     ),
-                    child: const Text(
+                    child: Text(
                       "STUDENT",
-                      style: TextStyle(color: Colors.white),
+                      style: GoogleFonts.nunitoSans(
+                        fontSize: MediaQuery.of(context).size.width * 0.045,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),
-                  const Text(
+                  Text(
                     "OR",
-                    style: TextStyle(
-                      fontSize: 16,
+                    style: GoogleFonts.nunitoSans(
+                      fontSize: MediaQuery.of(context).size.width * 0.035,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
@@ -96,8 +100,8 @@ class _WelcomePageState extends State<WelcomePage> {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      side: const BorderSide(color: Colors.white),
+                      backgroundColor: Color(0xff374F6B),
+                      // side: const BorderSide(color: Colors.white),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -106,9 +110,13 @@ class _WelcomePageState extends State<WelcomePage> {
                         horizontal: 90,
                       ),
                     ),
-                    child: const Text(
+                    child: Text(
                       "STAN",
-                      style: TextStyle(color: Colors.white),
+                      style: GoogleFonts.nunitoSans(
+                        fontSize: MediaQuery.of(context).size.width * 0.045,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],
