@@ -34,7 +34,7 @@ class _LoginPageStudentState extends State<LoginPageStudent> {
                 child: Center(
                   child: Text(
                     "Login\nTo\nPesenin",
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.nunitoSans(
                       fontSize: MediaQuery.of(context).size.width * 0.095,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
