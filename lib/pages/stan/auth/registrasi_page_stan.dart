@@ -89,7 +89,7 @@ class _RegistrasiPageStanState extends State<RegistrasiPageStan> {
                 child: Container(
                   height: MediaQuery.of(context).size.width * 0.14,
                   decoration: BoxDecoration(
-                    color: Color(0xff374F6B),
+                    color: Colors.black,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(

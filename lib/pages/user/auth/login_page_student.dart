@@ -1,17 +1,18 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import '../../../components/input_field.dart';
-import '../home_page_stan.dart';
-import 'registrasi_page_stan.dart';
+import '../home_page_student.dart';
+import 'registrasi_page_student.dart';
 
-class LoginPageStan extends StatefulWidget {
-  const LoginPageStan({super.key});
+class LoginPageStudent extends StatefulWidget {
+  const LoginPageStudent({super.key});
 
   @override
-  State<LoginPageStan> createState() => _LoginPageStanState();
+  State<LoginPageStudent> createState() => _LoginPageStudentState();
 }
 
-class _LoginPageStanState extends State<LoginPageStan> {
+class _LoginPageStudentState extends State<LoginPageStudent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +39,7 @@ class _LoginPageStanState extends State<LoginPageStan> {
                 ),
               ),
               Text(
-                "Glad to see you again.",
+                "Glad to see you sir.",
                 style: TextStyle(
                   fontSize: MediaQuery.of(context).size.width * 0.055,
                   fontWeight: FontWeight.bold,
@@ -62,7 +63,7 @@ class _LoginPageStanState extends State<LoginPageStan> {
                       onTap: () {
                         Navigator.of(context).pushReplacement(
                           MaterialPageRoute(
-                            builder: (context) => const HomePageStan(),
+                            builder: (context) => const HomePageStudent(),
                           ),
                         );
                       },
@@ -76,8 +77,7 @@ class _LoginPageStanState extends State<LoginPageStan> {
                           child: Text(
                             "Login",
                             style: TextStyle(
-                              fontSize:
-                                  MediaQuery.of(context).size.width * 0.04,
+                              fontSize: MediaQuery.of(context).size.width * 0.04,
                               fontWeight: FontWeight.w600,
                               color: Colors.white,
                             ),
@@ -106,7 +106,7 @@ class _LoginPageStanState extends State<LoginPageStan> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const RegistrasiPageStan(),
+                          builder: (context) => const RegistrasiPageStudent(),
                         ),
                       );
                     },
@@ -128,3 +128,4 @@ class _LoginPageStanState extends State<LoginPageStan> {
     );
   }
 }
+

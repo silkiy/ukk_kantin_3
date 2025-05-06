@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ukk_kantin_yanto/pages/welcome_page.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:path/path.dart';
 
-void main() {
+import 'pages/splash_screen.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await deleteDatabase(await getDatabasesPath().then((path) => join(path, 'checkout.db')));
   runApp(const MyApp());
 }
 
@@ -11,9 +16,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/welcome',
+      initialRoute: '/splash',
       debugShowCheckedModeBanner: false,
-      routes: {'/welcome': (context) => WelcomePage()},
+      routes: {'/splash': (context) => SplashScreen(),
+      },
     );
   }
 }

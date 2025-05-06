@@ -77,7 +77,7 @@ class _RegistrasiPageStudentState extends State<RegistrasiPageStudent> {
                   Text("No File Chose", style: TextStyle(fontSize: 16)),
                 ],
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).pushReplacement(
@@ -89,7 +89,7 @@ class _RegistrasiPageStudentState extends State<RegistrasiPageStudent> {
                 child: Container(
                   height: MediaQuery.of(context).size.width * 0.14,
                   decoration: BoxDecoration(
-                    color: Color(0xff374F6B),
+                    color: Colors.black,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(

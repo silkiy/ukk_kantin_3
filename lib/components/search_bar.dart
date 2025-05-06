@@ -11,13 +11,14 @@ class SearchBarComponents extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               width: 1.5,
-              color: const Color.fromRGBO(55, 79, 107, 1),
+              color: const Color(0xff757575),
             ),
             borderRadius: BorderRadius.circular(24),
           ),
-          labelText: 'Cari stan kamu disini',
+          labelText: 'Mau Makan Dimana',
           border: OutlineInputBorder(),
           prefixIcon: Icon(Icons.search),
+          fillColor: Color(0xffD9D9D9)
         ),
       ),
     );

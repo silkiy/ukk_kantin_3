@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../components/bottom_nav_bar.dart';
 import '../../components/search_bar.dart';
 import '../../components/stand_card.dart';
 
@@ -13,10 +14,18 @@ class HomePageStudent extends StatefulWidget {
 
 class _HomePageStudentState extends State<HomePageStudent> {
   final List<Map<String, String>> stands = [
-    {"name": "Stand A", "img": "assets/images/kantin.jpeg"},
-    {"name": "Stand A", "img": "assets/images/kantin.jpeg"},
-    {"name": "Stand A", "img": "assets/images/kantin.jpeg"},
-    {"name": "Stand A", "img": "assets/images/kantin.jpeg"},
+    {
+      "name": "Stand A",
+      "img": "assets/images/kantin.jpg",
+      "jamOperational": "09:00 - 12:00",
+      "buka": "setiap hari",
+    },
+    {
+      "name": "Stand B",
+      "img": "assets/images/kantin.jpeg",
+      "jamOperational": "09:00 - 12:00",
+      "buka": "setiap hari",
+    },
   ];
 
   @override
@@ -30,37 +39,28 @@ class _HomePageStudentState extends State<HomePageStudent> {
             horizontal: MediaQuery.of(context).size.width * 0.03,
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
+              SearchBarComponents(),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+              Image.asset(
+                "assets/images/banner1.webp",
                 height: 166,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/kantin_smk_telkom.webp"),
-                    fit: BoxFit.fill,
-                  ),
-                  borderRadius: BorderRadius.all(Radius.circular(16)),
+                fit: BoxFit.cover,
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              Text(
+                "Pengumuman Hari Ini : ",
+                style: GoogleFonts.poppins(
+                  fontSize: MediaQuery.of(context).size.width * 0.035,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-              SearchBarComponents(),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-              Row(
-                children: [
-                  Text(
-                    "Pilih Stan",
-                    style: GoogleFonts.nunitoSans(
-                      fontSize: MediaQuery.of(context).size.width * 0.04,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.15),
               SizedBox(
-                height: MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height * 0.5,
                 child: ListView.separated(
-                  shrinkWrap: true,
                   physics: AlwaysScrollableScrollPhysics(),
                   itemCount: stands.length,
                   separatorBuilder: (context, index) => SizedBox(height: 10),
@@ -68,6 +68,8 @@ class _HomePageStudentState extends State<HomePageStudent> {
                     return StandCard(
                       name: stands[index]["name"]!,
                       img: stands[index]["img"]!,
+                      buka: stands[index]["buka"]!,
+                      jamOperational: stands[index]["jamOperational"]!,
                     );
                   },
                 ),
@@ -76,6 +78,7 @@ class _HomePageStudentState extends State<HomePageStudent> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavBar(selectedItem: 0),
     );
   }
 }

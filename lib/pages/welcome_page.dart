@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'stan/auth/login_page_stan.dart';
-import 'student/auth/login_page_student.dart';
+
+import 'user/auth/login_page_student.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -20,14 +20,10 @@ class _WelcomePageState extends State<WelcomePage> {
         children: [
           Expanded(
             child: Center(
-              child: Text(
-                "Welcome\nTo\nPesenin",
-                style: GoogleFonts.nunitoSans(
-                  fontSize: MediaQuery.of(context).size.width * 0.095,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.center,
+              child: Image(
+                image: AssetImage('assets/images/welcome_to.png'),
+                width: 200,
+                height: 200,
               ),
             ),
           ),
@@ -36,20 +32,7 @@ class _WelcomePageState extends State<WelcomePage> {
             child: Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30),
-                  topRight: Radius.circular(30),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    spreadRadius: 5,
-                    blurRadius: 5,
-                  ),
-                ],
-              ),
+              color: const Color(0xFF666666),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
@@ -63,7 +46,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff374F6B),
+                      backgroundColor: Colors.black,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -72,22 +55,18 @@ class _WelcomePageState extends State<WelcomePage> {
                         horizontal: 100,
                       ),
                     ),
-                    child: Text(
+                    child: const Text(
                       "STUDENT",
-                      style: GoogleFonts.nunitoSans(
-                        fontSize: MediaQuery.of(context).size.width * 0.045,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
                   const SizedBox(height: 10),
-                  Text(
+                  const Text(
                     "OR",
-                    style: GoogleFonts.nunitoSans(
-                      fontSize: MediaQuery.of(context).size.width * 0.035,
+                    style: TextStyle(
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -100,8 +79,8 @@ class _WelcomePageState extends State<WelcomePage> {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff374F6B),
-                      // side: const BorderSide(color: Colors.white),
+                      backgroundColor: Colors.white,
+                      side: const BorderSide(color: Colors.white),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -110,13 +89,9 @@ class _WelcomePageState extends State<WelcomePage> {
                         horizontal: 90,
                       ),
                     ),
-                    child: Text(
+                    child: const Text(
                       "STAN",
-                      style: GoogleFonts.nunitoSans(
-                        fontSize: MediaQuery.of(context).size.width * 0.045,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(color: Colors.black),
                     ),
                   ),
                 ],
